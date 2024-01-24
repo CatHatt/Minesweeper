@@ -1,0 +1,67 @@
+:root {
+    --grid-border-radius: 60px;
+    --minefield-width: 4;
+    --minefield-height: 4;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+body {
+    background-color: #131313;
+    width: 100vw;
+    width: 100dvw;
+    height: 100vh;
+    height: 100dvh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 90%;
+}
+
+.minefield {
+    display: grid;
+    max-width: 100%;
+    max-height: 100%;
+    grid-template-columns: repeat(var(--minefield-width), 1fr);
+    grid-template-rows: repeat(var(--minefield-height), 1fr);
+    gap: 10px;
+    aspect-ratio: 1 / 1;
+}
+
+.minecell {
+    aspect-ratio: 1 / 1;
+    border: 5px solid #474747;
+    border-radius: 3%;
+    background: #282828;
+    font-size: 400%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.topLeft {
+    border-top-left-radius: var(--grid-border-radius);
+}
+
+.topRight {
+    border-top-right-radius: var(--grid-border-radius);
+}
+
+.bottomLeft {
+    border-bottom-left-radius: var(--grid-border-radius);
+}
+
+.bottomRight {
+    border-bottom-right-radius: var(--grid-border-radius);
+}
